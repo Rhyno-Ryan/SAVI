@@ -1,0 +1,365 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statisical Analysis, Visualization & Inference (SAVI) Workshops, with Python",
+    "section": "",
+    "text": "0.1 Table of Contents",
+    "crumbs": [
+      "Home Page / Preface",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statisical Analysis, Visualization & Inference (SAVI) Workshops</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#table-of-contents",
+    "href": "index.html#table-of-contents",
+    "title": "Statisical Analysis, Visualization & Inference (SAVI) Workshops, with Python",
+    "section": "",
+    "text": "Preface\n\nIntroduction to Data and Data Visualization\nIntroduction to Statistical Inference\nIntroduction to linear regression Analysis",
+    "crumbs": [
+      "Home Page / Preface",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statisical Analysis, Visualization & Inference (SAVI) Workshops</span>"
+    ]
+  },
+  {
+    "objectID": "Preface.html",
+    "href": "Preface.html",
+    "title": "2  Preface",
+    "section": "",
+    "text": "2.1 Setting the Stage\nThe following work was done with the support of Dr. Mario Bañuelos and Bethany Hernandez-Torres. In particular, this project was originally thought up by Dr. Bañuelos as a series of workshops to support students attending their first REU in data science. The goal was to give students in the workshops the skills to use Google Colab to visualize data, apply statistical methods to draw inferences about the data, and develop background knowledge of the different kinds of machine learning models.\nBethany then brought this project to life, creating both its name, Statistical Analysis, Visualization & Inference (SAVI), and logo for this project. She, alongside Dr. Bañuelos, continues to provide feedback on all aspects of the project from topic choice to the finer details of the code.\nSAVI remains as a continuing project to support future students and those willing to learn.\nThe name for this work was inspired by the word “savi,” which means rain in Mixteco, or Tu’un Sávi (“language of the rain”). Mixteco is one of the most widely spoken indigenous languages in Mexico, primarily in the state of Oaxaca, as well as in Guerrero, Puebla, and among migrant communities in the U.S [1].\nIn general, data analysis is about making inferences about some set of data through visualizations, statitical models, and mathematical methoods. Here we devlope each of these skills through generalizing examples seen in the following Google Colab notebooks.\nWe start by first observing what our data looks like through histograms, plots, and time-series charts. Next we consider the statistical methods used to make inferenecs about our data. Then lastly, we apply models our data using methods such as linear regression.\nFor clarity sake, before starting any of the notebooks here are some words that are commonly interchangable [2]:\nSources:\n[1] What is savi?\n[2] Introduction to Statistical Learning",
+    "crumbs": [
+      "Home Page / Preface",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "Preface.html#setting-the-stage",
+    "href": "Preface.html#setting-the-stage",
+    "title": "2  Preface",
+    "section": "",
+    "text": "Probablity and Statistics is about how we quantify and update our beliefs and deal with uncertainty - Joe Blitzstien\n\n\n\n\n\n“independent varibles, predictors, features, and varibles.”\n\n\n“dependent varibles and reponses.”",
+    "crumbs": [
+      "Home Page / Preface",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "WS_1.html",
+    "href": "WS_1.html",
+    "title": "3  Notebook 1 : Intro to Data and Data Visualization",
+    "section": "",
+    "text": "3.1 Learning objectives",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Notebook 1 : Intro to Data and Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "WS_1.html#learning-objectives",
+    "href": "WS_1.html#learning-objectives",
+    "title": "3  Notebook 1 : Intro to Data and Data Visualization",
+    "section": "",
+    "text": "Load data into a Colab\nClean data\n\nRemoving duplicates\nRemoving columns\nRemoving NaN’s\n\nVisualize data with:\n\nHistograms\nTime series plots\nScatter plots",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Notebook 1 : Intro to Data and Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "WS_1.html#libraries",
+    "href": "WS_1.html#libraries",
+    "title": "3  Notebook 1 : Intro to Data and Data Visualization",
+    "section": "3.2 Libraries:",
+    "text": "3.2 Libraries:\n\n# Libraries used to ...\n\n# Organize and Load data\nimport pandas as pd\n\n# Visualize Data (quickly)\nimport plotly.express as px\n\n# Layer Visualizations\nimport plotly.graph_objects as go",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Notebook 1 : Intro to Data and Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "WS_1.html#data-sets",
+    "href": "WS_1.html#data-sets",
+    "title": "3  Notebook 1 : Intro to Data and Data Visualization",
+    "section": "3.3 Data Sets",
+    "text": "3.3 Data Sets\n\nMNIST\nMicrosoft (MSFT) Stock\nCustomer Call List",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Notebook 1 : Intro to Data and Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "WS_1.html#importing-data",
+    "href": "WS_1.html#importing-data",
+    "title": "3  Notebook 1 : Intro to Data and Data Visualization",
+    "section": "3.4 1. Importing data",
+    "text": "3.4 1. Importing data\nIn practice, you will normally import data from a file given to you.\nHence, importing data typically require two things. 1. You know the command to load in the data 2. You know both the file path and filename.\nThen, if you continue to use google colab for your projects. You can give access google colab access to your google drive, and load files through google drive. Although we will not be utilizing this here. The code for mounting your google drive is below.\n\n# Code for \"mounting\" (giving google colab access to) google drive\n# We will not be using this, but is good to know\n#from google.colab import drive\n#drive.mount('/content/drive')\n\nOnce you have access to data through a CSV or an excel file, to load in data from either file types, we will use the following pandas functions:\n\npd.read_csv(‘/filepath/file_name.csv’)\n\n\npd.read_excel(‘/filepath/file_name.xlsx’)\n\nWe will then associate each of these sets of data with a data frame ( in code we denote “df” ).",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Notebook 1 : Intro to Data and Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "WS_1.html#example-1.1-loading-in-data-from-a-file-path-mnist",
+    "href": "WS_1.html#example-1.1-loading-in-data-from-a-file-path-mnist",
+    "title": "3  Notebook 1 : Intro to Data and Data Visualization",
+    "section": "3.5 Example 1.1 – Loading in data from a file path ( MNIST )",
+    "text": "3.5 Example 1.1 – Loading in data from a file path ( MNIST )\n\n#Loading data from filepath.\ndf_mnist = pd.read_csv('/content/sample_data/mnist_test.csv')\n\n# Confidence Check : Look at the data\ndf_mnist.head()\n\n\n---------------------------------------------------------------------------\nHTTPError                                 Traceback (most recent call last)\nCell In[7], line 2\n      1 #Loading data from filepath.\n----&gt; 2 df_mnist = pd.read_csv('https://colab.research.google.com/content/sample_data/mnist_test.csv')\n      4 # Confidence Check : Look at the data\n      5 df_mnist.head()\n\nFile ~\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\io\\parsers\\readers.py:1026, in read_csv(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)\n   1013 kwds_defaults = _refine_defaults_read(\n   1014     dialect,\n   1015     delimiter,\n   (...)   1022     dtype_backend=dtype_backend,\n   1023 )\n   1024 kwds.update(kwds_defaults)\n-&gt; 1026 return _read(filepath_or_buffer, kwds)\n\nFile ~\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\io\\parsers\\readers.py:620, in _read(filepath_or_buffer, kwds)\n    617 _validate_names(kwds.get(\"names\", None))\n    619 # Create the parser.\n--&gt; 620 parser = TextFileReader(filepath_or_buffer, **kwds)\n    622 if chunksize or iterator:\n    623     return parser\n\nFile ~\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\io\\parsers\\readers.py:1620, in TextFileReader.__init__(self, f, engine, **kwds)\n   1617     self.options[\"has_index_names\"] = kwds[\"has_index_names\"]\n   1619 self.handles: IOHandles | None = None\n-&gt; 1620 self._engine = self._make_engine(f, self.engine)\n\nFile ~\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\io\\parsers\\readers.py:1880, in TextFileReader._make_engine(self, f, engine)\n   1878     if \"b\" not in mode:\n   1879         mode += \"b\"\n-&gt; 1880 self.handles = get_handle(\n   1881     f,\n   1882     mode,\n   1883     encoding=self.options.get(\"encoding\", None),\n   1884     compression=self.options.get(\"compression\", None),\n   1885     memory_map=self.options.get(\"memory_map\", False),\n   1886     is_text=is_text,\n   1887     errors=self.options.get(\"encoding_errors\", \"strict\"),\n   1888     storage_options=self.options.get(\"storage_options\", None),\n   1889 )\n   1890 assert self.handles is not None\n   1891 f = self.handles.handle\n\nFile ~\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\io\\common.py:728, in get_handle(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)\n    725     codecs.lookup_error(errors)\n    727 # open URLs\n--&gt; 728 ioargs = _get_filepath_or_buffer(\n    729     path_or_buf,\n    730     encoding=encoding,\n    731     compression=compression,\n    732     mode=mode,\n    733     storage_options=storage_options,\n    734 )\n    736 handle = ioargs.filepath_or_buffer\n    737 handles: list[BaseBuffer]\n\nFile ~\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\io\\common.py:384, in _get_filepath_or_buffer(filepath_or_buffer, encoding, compression, mode, storage_options)\n    382 # assuming storage_options is to be interpreted as headers\n    383 req_info = urllib.request.Request(filepath_or_buffer, headers=storage_options)\n--&gt; 384 with urlopen(req_info) as req:\n    385     content_encoding = req.headers.get(\"Content-Encoding\", None)\n    386     if content_encoding == \"gzip\":\n    387         # Override compression based on Content-Encoding header\n\nFile ~\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\io\\common.py:289, in urlopen(*args, **kwargs)\n    283 \"\"\"\n    284 Lazy-import wrapper for stdlib urlopen, as that imports a big chunk of\n    285 the stdlib.\n    286 \"\"\"\n    287 import urllib.request\n--&gt; 289 return urllib.request.urlopen(*args, **kwargs)\n\nFile C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\request.py:216, in urlopen(url, data, timeout, cafile, capath, cadefault, context)\n    214 else:\n    215     opener = _opener\n--&gt; 216 return opener.open(url, data, timeout)\n\nFile C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\request.py:525, in OpenerDirector.open(self, fullurl, data, timeout)\n    523 for processor in self.process_response.get(protocol, []):\n    524     meth = getattr(processor, meth_name)\n--&gt; 525     response = meth(req, response)\n    527 return response\n\nFile C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\request.py:634, in HTTPErrorProcessor.http_response(self, request, response)\n    631 # According to RFC 2616, \"2xx\" code indicates that the client's\n    632 # request was successfully received, understood, and accepted.\n    633 if not (200 &lt;= code &lt; 300):\n--&gt; 634     response = self.parent.error(\n    635         'http', request, response, code, msg, hdrs)\n    637 return response\n\nFile C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\request.py:563, in OpenerDirector.error(self, proto, *args)\n    561 if http_err:\n    562     args = (dict, 'default', 'http_error_default') + orig_args\n--&gt; 563     return self._call_chain(*args)\n\nFile C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\request.py:496, in OpenerDirector._call_chain(self, chain, kind, meth_name, *args)\n    494 for handler in handlers:\n    495     func = getattr(handler, meth_name)\n--&gt; 496     result = func(*args)\n    497     if result is not None:\n    498         return result\n\nFile C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\request.py:643, in HTTPDefaultErrorHandler.http_error_default(self, req, fp, code, msg, hdrs)\n    642 def http_error_default(self, req, fp, code, msg, hdrs):\n--&gt; 643     raise HTTPError(req.full_url, code, msg, hdrs, fp)\n\nHTTPError: HTTP Error 403: Forbidden",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Notebook 1 : Intro to Data and Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "WS_1.html#example-1.2-loading-data-from-a-python-package.",
+    "href": "WS_1.html#example-1.2-loading-data-from-a-python-package.",
+    "title": "3  Notebook 1 : Intro to Data and Data Visualization",
+    "section": "3.6 Example 1.2 – Loading data from a python package.",
+    "text": "3.6 Example 1.2 – Loading data from a python package.\nFor a python package, the syntax for parameters may change based on the use case. Reference their documentation to be able to download a particular set of data.\n\nimport yfinance as yf\nimport datetime\n\n# 1. Define time frame for the stock data\nstart = datetime.datetime(2025, 1, 1)\nend = datetime.datetime(2026, 4, 9)\n\n# 2. Fetch data\n# This returns the exact same Pandas DataFrame format\ndf_MSFT = yf.download('MSFT', start=start, end=end)\n\n# Confidence Check : Look at the data\ndf_MSFT\n\n/tmp/ipykernel_15382/3407125679.py:10: FutureWarning:\n\nYF.download() has changed argument auto_adjust default to True\n\n[*********************100%***********************]  1 of 1 completed\n\n\n\n    \n\n\n\n\n\nPrice\nClose\nHigh\nLow\nOpen\nVolume\n\n\nTicker\nMSFT\nMSFT\nMSFT\nMSFT\nMSFT\n\n\nDate\n\n\n\n\n\n\n\n\n\n2025-01-02\n414.568604\n421.986845\n410.874369\n421.452012\n16896500\n\n\n2025-01-03\n419.292877\n419.966353\n415.519392\n417.044612\n16662900\n\n\n2025-01-06\n423.749756\n430.157753\n421.402473\n423.898312\n20573600\n\n\n2025-01-07\n418.322296\n426.522945\n416.767335\n424.888764\n18139100\n\n\n2025-01-08\n420.491272\n422.878180\n417.500225\n419.401808\n15054600\n\n\n...\n...\n...\n...\n...\n...\n\n\n2026-04-01\n369.369995\n373.989990\n368.200012\n373.489990\n29417200\n\n\n2026-04-02\n373.459991\n373.640015\n364.149994\n367.209991\n24099100\n\n\n2026-04-06\n372.880005\n373.730011\n369.500000\n373.489990\n16146600\n\n\n2026-04-07\n372.290009\n372.450012\n366.559998\n370.339996\n21443300\n\n\n2026-04-08\n374.329987\n385.000000\n371.410004\n384.980011\n33009400\n\n\n\n\n316 rows × 5 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\nIn other cases, you may also load data in from github, or in some instances from a python package.\nIn the case of github. 1. Go to the file in github. 2. At the top right you will see a “raw” button, right click and copy the link. 3. The copied link is now your parameter for our function “pd.read_foo()” to read either a CSV or Excel file.",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Notebook 1 : Intro to Data and Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "WS_1.html#example-1.3-loading-data-from-github-caller-data",
+    "href": "WS_1.html#example-1.3-loading-data-from-github-caller-data",
+    "title": "3  Notebook 1 : Intro to Data and Data Visualization",
+    "section": "3.7 Example 1.3 – Loading data from github ( Caller data )",
+    "text": "3.7 Example 1.3 – Loading data from github ( Caller data )\n\n#Loading in the data for\nurl = 'https://github.com/AlexTheAnalyst/PandasYouTubeSeries/raw/refs/heads/main/Customer%20Call%20List.xlsx'\ndf_call_list = pd.read_excel(url)\n\ndf_call_list\n\n\n    \n\n\n\n\n\n\nCustomerID\nFirst_Name\nLast_Name\nPhone_Number\nAddress\nPaying Customer\nDo_Not_Contact\nNot_Useful_Column\n\n\n\n\n0\n1001\nFrodo\nBaggins\n123-545-5421\n123 Shire Lane, Shire\nYes\nNo\nTrue\n\n\n1\n1002\nAbed\nNadir\n123/643/9775\n93 West Main Street\nNo\nYes\nFalse\n\n\n2\n1003\nWalter\n/White\n7066950392\n298 Drugs Driveway\nN\nNaN\nTrue\n\n\n3\n1004\nDwight\nSchrute\n123-543-2345\n980 Paper Avenue, Pennsylvania, 18503\nYes\nY\nTrue\n\n\n4\n1005\nJon\nSnow\n876|678|3469\n123 Dragons Road\nY\nNo\nTrue\n\n\n5\n1006\nRon\nSwanson\n304-762-2467\n768 City Parkway\nYes\nYes\nTrue\n\n\n6\n1007\nJeff\nWinger\nNaN\n1209 South Street\nNo\nNo\nFalse\n\n\n7\n1008\nSherlock\nHolmes\n876|678|3469\n98 Clue Drive\nN\nNo\nFalse\n\n\n8\n1009\nGandalf\nNaN\nN/a\n123 Middle Earth\nYes\nNaN\nFalse\n\n\n9\n1010\nPeter\nParker\n123-545-5421\n25th Main Street, New York\nYes\nNo\nTrue\n\n\n10\n1011\nSamwise\nGamgee\nNaN\n612 Shire Lane, Shire\nYes\nNo\nTrue\n\n\n11\n1012\nHarry\n...Potter\n7066950392\n2394 Hogwarts Avenue\nY\nNaN\nTrue\n\n\n12\n1013\nDon\nDraper\n123-543-2345\n2039 Main Street\nYes\nN\nFalse\n\n\n13\n1014\nLeslie\nKnope\n876|678|3469\n343 City Parkway\nYes\nNo\nFalse\n\n\n14\n1015\nToby\nFlenderson_\n304-762-2467\n214 HR Avenue\nN\nNo\nFalse\n\n\n15\n1016\nRon\nWeasley\n123-545-5421\n2395 Hogwarts Avenue\nNo\nN\nFalse\n\n\n16\n1017\nMichael\nScott\n123/643/9775\n121 Paper Avenue, Pennsylvania\nYes\nNo\nFalse\n\n\n17\n1018\nClark\nKent\n7066950392\n3498 Super Lane\nY\nNaN\nTrue\n\n\n18\n1019\nCreed\nBraton\nN/a\nN/a\nN/a\nYes\nTrue\n\n\n19\n1020\nAnakin\nSkywalker\n876|678|3469\n910 Tatooine Road, Tatooine\nYes\nN\nTrue\n\n\n20\n1020\nAnakin\nSkywalker\n876|678|3469\n910 Tatooine Road, Tatooine\nYes\nN\nTrue",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Notebook 1 : Intro to Data and Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "WS_1.html#example-2.1-caller-data",
+    "href": "WS_1.html#example-2.1-caller-data",
+    "title": "3  Notebook 1 : Intro to Data and Data Visualization",
+    "section": "4.1 Example 2.1 – Caller data",
+    "text": "4.1 Example 2.1 – Caller data\nIn this example we will examine sample caller data (See [1] in Resources). What are things we notice about the data below?\n\ndf_call_list\n\n\n    \n\n\n\n\n\n\nCustomerID\nFirst_Name\nLast_Name\nPhone_Number\nAddress\nPaying Customer\nDo_Not_Contact\nNot_Useful_Column\n\n\n\n\n0\n1001\nFrodo\nBaggins\n123-545-5421\n123 Shire Lane, Shire\nYes\nNo\nTrue\n\n\n1\n1002\nAbed\nNadir\n123/643/9775\n93 West Main Street\nNo\nYes\nFalse\n\n\n2\n1003\nWalter\n/White\n7066950392\n298 Drugs Driveway\nN\nNaN\nTrue\n\n\n3\n1004\nDwight\nSchrute\n123-543-2345\n980 Paper Avenue, Pennsylvania, 18503\nYes\nY\nTrue\n\n\n4\n1005\nJon\nSnow\n876|678|3469\n123 Dragons Road\nY\nNo\nTrue\n\n\n5\n1006\nRon\nSwanson\n304-762-2467\n768 City Parkway\nYes\nYes\nTrue\n\n\n6\n1007\nJeff\nWinger\nNaN\n1209 South Street\nNo\nNo\nFalse\n\n\n7\n1008\nSherlock\nHolmes\n876|678|3469\n98 Clue Drive\nN\nNo\nFalse\n\n\n8\n1009\nGandalf\nNaN\nN/a\n123 Middle Earth\nYes\nNaN\nFalse\n\n\n9\n1010\nPeter\nParker\n123-545-5421\n25th Main Street, New York\nYes\nNo\nTrue\n\n\n10\n1011\nSamwise\nGamgee\nNaN\n612 Shire Lane, Shire\nYes\nNo\nTrue\n\n\n11\n1012\nHarry\n...Potter\n7066950392\n2394 Hogwarts Avenue\nY\nNaN\nTrue\n\n\n12\n1013\nDon\nDraper\n123-543-2345\n2039 Main Street\nYes\nN\nFalse\n\n\n13\n1014\nLeslie\nKnope\n876|678|3469\n343 City Parkway\nYes\nNo\nFalse\n\n\n14\n1015\nToby\nFlenderson_\n304-762-2467\n214 HR Avenue\nN\nNo\nFalse\n\n\n15\n1016\nRon\nWeasley\n123-545-5421\n2395 Hogwarts Avenue\nNo\nN\nFalse\n\n\n16\n1017\nMichael\nScott\n123/643/9775\n121 Paper Avenue, Pennsylvania\nYes\nNo\nFalse\n\n\n17\n1018\nClark\nKent\n7066950392\n3498 Super Lane\nY\nNaN\nTrue\n\n\n18\n1019\nCreed\nBraton\nN/a\nN/a\nN/a\nYes\nTrue\n\n\n19\n1020\nAnakin\nSkywalker\n876|678|3469\n910 Tatooine Road, Tatooine\nYes\nN\nTrue\n\n\n20\n1020\nAnakin\nSkywalker\n876|678|3469\n910 Tatooine Road, Tatooine\nYes\nN\nTrue\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\nNotice that this set of data has duplicates, NaN’s, a useless column, and inconsistent formatting. For the sake of time, we will only worry about duplicates, NaN’s, and the useless column. However [1] covers how to clean all of these cases.\nWe will first 1. Remove Duplicates 2. Repalces NaN’s with empty strings 3. Remove Columns we do not need\n\n# Saving the unclean call list to compare later\ndf_call_list_old = df_call_list\n\n# Removing Duplicates\ndf_call_list = df_call_list.drop_duplicates()\n\ndf_call_list\n\n\n    \n\n\n\n\n\n\nCustomerID\nFirst_Name\nLast_Name\nPhone_Number\nAddress\nPaying Customer\nDo_Not_Contact\nNot_Useful_Column\n\n\n\n\n0\n1001\nFrodo\nBaggins\n123-545-5421\n123 Shire Lane, Shire\nYes\nNo\nTrue\n\n\n1\n1002\nAbed\nNadir\n123/643/9775\n93 West Main Street\nNo\nYes\nFalse\n\n\n2\n1003\nWalter\n/White\n7066950392\n298 Drugs Driveway\nN\nNaN\nTrue\n\n\n3\n1004\nDwight\nSchrute\n123-543-2345\n980 Paper Avenue, Pennsylvania, 18503\nYes\nY\nTrue\n\n\n4\n1005\nJon\nSnow\n876|678|3469\n123 Dragons Road\nY\nNo\nTrue\n\n\n5\n1006\nRon\nSwanson\n304-762-2467\n768 City Parkway\nYes\nYes\nTrue\n\n\n6\n1007\nJeff\nWinger\nNaN\n1209 South Street\nNo\nNo\nFalse\n\n\n7\n1008\nSherlock\nHolmes\n876|678|3469\n98 Clue Drive\nN\nNo\nFalse\n\n\n8\n1009\nGandalf\nNaN\nN/a\n123 Middle Earth\nYes\nNaN\nFalse\n\n\n9\n1010\nPeter\nParker\n123-545-5421\n25th Main Street, New York\nYes\nNo\nTrue\n\n\n10\n1011\nSamwise\nGamgee\nNaN\n612 Shire Lane, Shire\nYes\nNo\nTrue\n\n\n11\n1012\nHarry\n...Potter\n7066950392\n2394 Hogwarts Avenue\nY\nNaN\nTrue\n\n\n12\n1013\nDon\nDraper\n123-543-2345\n2039 Main Street\nYes\nN\nFalse\n\n\n13\n1014\nLeslie\nKnope\n876|678|3469\n343 City Parkway\nYes\nNo\nFalse\n\n\n14\n1015\nToby\nFlenderson_\n304-762-2467\n214 HR Avenue\nN\nNo\nFalse\n\n\n15\n1016\nRon\nWeasley\n123-545-5421\n2395 Hogwarts Avenue\nNo\nN\nFalse\n\n\n16\n1017\nMichael\nScott\n123/643/9775\n121 Paper Avenue, Pennsylvania\nYes\nNo\nFalse\n\n\n17\n1018\nClark\nKent\n7066950392\n3498 Super Lane\nY\nNaN\nTrue\n\n\n18\n1019\nCreed\nBraton\nN/a\nN/a\nN/a\nYes\nTrue\n\n\n19\n1020\nAnakin\nSkywalker\n876|678|3469\n910 Tatooine Road, Tatooine\nYes\nN\nTrue\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\n# Removing NaN's (Replacing the NaN's)\ndf_call_list = df_call_list.fillna(\"\")\n\n#Visualize call list\ndf_call_list\n\n\n    \n\n\n\n\n\n\nCustomerID\nFirst_Name\nLast_Name\nPhone_Number\nAddress\nPaying Customer\nDo_Not_Contact\nNot_Useful_Column\n\n\n\n\n0\n1001\nFrodo\nBaggins\n123-545-5421\n123 Shire Lane, Shire\nYes\nNo\nTrue\n\n\n1\n1002\nAbed\nNadir\n123/643/9775\n93 West Main Street\nNo\nYes\nFalse\n\n\n2\n1003\nWalter\n/White\n7066950392\n298 Drugs Driveway\nN\n\nTrue\n\n\n3\n1004\nDwight\nSchrute\n123-543-2345\n980 Paper Avenue, Pennsylvania, 18503\nYes\nY\nTrue\n\n\n4\n1005\nJon\nSnow\n876|678|3469\n123 Dragons Road\nY\nNo\nTrue\n\n\n5\n1006\nRon\nSwanson\n304-762-2467\n768 City Parkway\nYes\nYes\nTrue\n\n\n6\n1007\nJeff\nWinger\n\n1209 South Street\nNo\nNo\nFalse\n\n\n7\n1008\nSherlock\nHolmes\n876|678|3469\n98 Clue Drive\nN\nNo\nFalse\n\n\n8\n1009\nGandalf\n\nN/a\n123 Middle Earth\nYes\n\nFalse\n\n\n9\n1010\nPeter\nParker\n123-545-5421\n25th Main Street, New York\nYes\nNo\nTrue\n\n\n10\n1011\nSamwise\nGamgee\n\n612 Shire Lane, Shire\nYes\nNo\nTrue\n\n\n11\n1012\nHarry\n...Potter\n7066950392\n2394 Hogwarts Avenue\nY\n\nTrue\n\n\n12\n1013\nDon\nDraper\n123-543-2345\n2039 Main Street\nYes\nN\nFalse\n\n\n13\n1014\nLeslie\nKnope\n876|678|3469\n343 City Parkway\nYes\nNo\nFalse\n\n\n14\n1015\nToby\nFlenderson_\n304-762-2467\n214 HR Avenue\nN\nNo\nFalse\n\n\n15\n1016\nRon\nWeasley\n123-545-5421\n2395 Hogwarts Avenue\nNo\nN\nFalse\n\n\n16\n1017\nMichael\nScott\n123/643/9775\n121 Paper Avenue, Pennsylvania\nYes\nNo\nFalse\n\n\n17\n1018\nClark\nKent\n7066950392\n3498 Super Lane\nY\n\nTrue\n\n\n18\n1019\nCreed\nBraton\nN/a\nN/a\nN/a\nYes\nTrue\n\n\n19\n1020\nAnakin\nSkywalker\n876|678|3469\n910 Tatooine Road, Tatooine\nYes\nN\nTrue\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\n# Removing irrelevant columns\ndf_call_list = df_call_list.drop(columns= [\"Not_Useful_Column\",\"Last_Name\",\"Phone_Number\", \"Address\"])\n\n#Visualize call list\ndf_call_list\n\n\n    \n\n\n\n\n\n\nCustomerID\nFirst_Name\nPaying Customer\nDo_Not_Contact\n\n\n\n\n0\n1001\nFrodo\nYes\nNo\n\n\n1\n1002\nAbed\nNo\nYes\n\n\n2\n1003\nWalter\nN\n\n\n\n3\n1004\nDwight\nYes\nY\n\n\n4\n1005\nJon\nY\nNo\n\n\n5\n1006\nRon\nYes\nYes\n\n\n6\n1007\nJeff\nNo\nNo\n\n\n7\n1008\nSherlock\nN\nNo\n\n\n8\n1009\nGandalf\nYes\n\n\n\n9\n1010\nPeter\nYes\nNo\n\n\n10\n1011\nSamwise\nYes\nNo\n\n\n11\n1012\nHarry\nY\n\n\n\n12\n1013\nDon\nYes\nN\n\n\n13\n1014\nLeslie\nYes\nNo\n\n\n14\n1015\nToby\nN\nNo\n\n\n15\n1016\nRon\nNo\nN\n\n\n16\n1017\nMichael\nYes\nNo\n\n\n17\n1018\nClark\nY\n\n\n\n18\n1019\nCreed\nN/a\nYes\n\n\n19\n1020\nAnakin\nYes\nN\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\nAs an extra clean up for the next section, we can remove rows with empty answers, or “N/a” as an answer. Then, standardize the answers.\n\n# Make all the Yes -&gt; Y\n#              No -&gt; N\n# in \"Paying Customer\" Column\ndf_call_list[\"Paying Customer\"] = df_call_list[\"Paying Customer\"].str.replace('Yes',\"Y\")\ndf_call_list[\"Paying Customer\"] = df_call_list[\"Paying Customer\"].str.replace('No',\"N\")\n\n# Make all the Yes -&gt; Y\n#              No -&gt; N\n# in \"Do_Not_Contact\" Column\ndf_call_list[\"Do_Not_Contact\"] = df_call_list[\"Do_Not_Contact\"].str.replace('Yes',\"Y\")\ndf_call_list[\"Do_Not_Contact\"] = df_call_list[\"Do_Not_Contact\"].str.replace('No',\"N\")\n\n#Visualize call list\ndf_call_list\n\n\n    \n\n\n\n\n\n\nCustomerID\nFirst_Name\nPaying Customer\nDo_Not_Contact\n\n\n\n\n0\n1001\nFrodo\nY\nN\n\n\n1\n1002\nAbed\nN\nY\n\n\n2\n1003\nWalter\nN\n\n\n\n3\n1004\nDwight\nY\nY\n\n\n4\n1005\nJon\nY\nN\n\n\n5\n1006\nRon\nY\nY\n\n\n6\n1007\nJeff\nN\nN\n\n\n7\n1008\nSherlock\nN\nN\n\n\n8\n1009\nGandalf\nY\n\n\n\n9\n1010\nPeter\nY\nN\n\n\n10\n1011\nSamwise\nY\nN\n\n\n11\n1012\nHarry\nY\n\n\n\n12\n1013\nDon\nY\nN\n\n\n13\n1014\nLeslie\nY\nN\n\n\n14\n1015\nToby\nN\nN\n\n\n15\n1016\nRon\nN\nN\n\n\n16\n1017\nMichael\nY\nN\n\n\n17\n1018\nClark\nY\n\n\n\n18\n1019\nCreed\nN/a\nY\n\n\n19\n1020\nAnakin\nY\nN\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\n#Filtering through the call_list and column \"Paying customer\" to check for an empty string\nfor x in df_call_list.index:\n  if (df_call_list.loc[x, \"Paying Customer\"] == '') or (df_call_list.loc[x, \"Do_Not_Contact\"] == ''):\n    df_call_list.drop(x, inplace=True)\n\n#Filtering through the call_list and column \"Paying customer\" to check for an \"N/a\"\nfor x in df_call_list.index:\n  if df_call_list.loc[x, \"Paying Customer\"] == 'N/a' or df_call_list.loc[x, \"Do_Not_Contact\"] == 'N/a':\n    df_call_list.drop(x, inplace=True)\n\n#Visualize call list\ndf_call_list\n\n\n    \n\n\n\n\n\n\nCustomerID\nFirst_Name\nPaying Customer\nDo_Not_Contact\n\n\n\n\n0\n1001\nFrodo\nY\nN\n\n\n1\n1002\nAbed\nN\nY\n\n\n3\n1004\nDwight\nY\nY\n\n\n4\n1005\nJon\nY\nN\n\n\n5\n1006\nRon\nY\nY\n\n\n6\n1007\nJeff\nN\nN\n\n\n7\n1008\nSherlock\nN\nN\n\n\n9\n1010\nPeter\nY\nN\n\n\n10\n1011\nSamwise\nY\nN\n\n\n12\n1013\nDon\nY\nN\n\n\n13\n1014\nLeslie\nY\nN\n\n\n14\n1015\nToby\nN\nN\n\n\n15\n1016\nRon\nN\nN\n\n\n16\n1017\nMichael\nY\nN\n\n\n19\n1020\nAnakin\nY\nN",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Notebook 1 : Intro to Data and Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "WS_1.html#example-3.1-histograms",
+    "href": "WS_1.html#example-3.1-histograms",
+    "title": "3  Notebook 1 : Intro to Data and Data Visualization",
+    "section": "5.1 Example 3.1 – Histograms",
+    "text": "5.1 Example 3.1 – Histograms\nFor histograms, let’s consider on our call list, how many customers do we already have paying for our services, compared to the number of people who are not. We will use the following function to visualize our call list data frame.\n\npx.histogram(df_foo, x=“columns”)\n\n\n#Creating the bar chart/ histogram\nfig_hist = px.bar(df_call_list, x=\"Paying Customer\")\n\n#Visualizing bar chart\nfig_hist\n\n\n\n\n                                \n                                            \n\n\n\n\n\n5.1.1 Histogram lab (LAB TIME!)\n\nPart a – We saw in example 3.1 how to create a histogram. Now create a histogram with the “Do_Not_Contact” column.\nPart b – Now use the the following fuction to overlay the two histograms\n\nfig = go.Figure()\nfig.add_trace(go.Histogram(x=df['column_1']))\nfig.add_trace(go.Histogram(x=df['column_2']))\nfig.update_layout(barmode='group')",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Notebook 1 : Intro to Data and Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "WS_1.html#example-3.2-time-series",
+    "href": "WS_1.html#example-3.2-time-series",
+    "title": "3  Notebook 1 : Intro to Data and Data Visualization",
+    "section": "5.2 Example 3.2 – Time Series",
+    "text": "5.2 Example 3.2 – Time Series\nIn a time series, we want to visualize a measured value over time. In this partiuclar example we will visualize Microsoft stock close value every week.\n\npx.line(df_foo, x=‘Date’, y=‘plot_vals’)\n\n\ndf_MSFT_plot = df_MSFT.reset_index()\n# Flatten multi-level columns from yfinance output\ndf_MSFT_plot.columns = ['_'.join(col).strip() if isinstance(col, tuple) and col[1] else col[0] for col in df_MSFT_plot.columns.values]\n\n#Notice this is tuple\nprint(df_MSFT.columns)\n\n#Notice this is an arrary of names\nprint(df_MSFT_plot.columns)\n\n#Creating time series line plot\nfig_time_ser = px.line(df_MSFT_plot, x='Date', y='Close_MSFT')\n\n#Visualizing time series chart\nfig_time_ser\n\nMultiIndex([( 'Close', 'MSFT'),\n            (  'High', 'MSFT'),\n            (   'Low', 'MSFT'),\n            (  'Open', 'MSFT'),\n            ('Volume', 'MSFT')],\n           names=['Price', 'Ticker'])\nIndex(['Date', 'Close_MSFT', 'High_MSFT', 'Low_MSFT', 'Open_MSFT',\n       'Volume_MSFT'],\n      dtype='object')\n\n\n\n\n\n                                \n                                            \n\n\n\n\n\n5.2.1 Time-Series lab\n\nPart a – Find the code (ticker symbol) for any company’s stock and create a Time-Series chart similar to example 3.2.\nPart b – Now use the the following function to overlay the two time series visuals\n\nfig = go.Figure()\nfig.add_trace(go.Scatter(x=df['column_1']))\nfig.add_trace(go.Scatter(x=df['column_2']))",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Notebook 1 : Intro to Data and Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "WS_1.html#example-3.3-scatter-plot",
+    "href": "WS_1.html#example-3.3-scatter-plot",
+    "title": "3  Notebook 1 : Intro to Data and Data Visualization",
+    "section": "5.3 Example 3.3 – Scatter Plot",
+    "text": "5.3 Example 3.3 – Scatter Plot\nScatter plots can be useful to recognize trends. Here will apply the following function\n\npx.scatter(x=‘x_vals’, y=‘y_vals’)\n\nto visualize our Microsoft data again.\n\nfig_scatter = px.scatter(df_MSFT_plot, x='Date', y='Close_MSFT', title='MSFT Stock Price (Close) Scatter Plot')\nfig_scatter",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Notebook 1 : Intro to Data and Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "WS_1.html#example-3.4-3d-scatter-plot",
+    "href": "WS_1.html#example-3.4-3d-scatter-plot",
+    "title": "3  Notebook 1 : Intro to Data and Data Visualization",
+    "section": "5.4 Example 3.4 – 3D Scatter Plot",
+    "text": "5.4 Example 3.4 – 3D Scatter Plot\nIn some instance, we want to compare and plot more than two values. The following function allows us to compare 3 seperate values visually.\n\npx.scatter_3d(df, x=‘col_1’, y=‘col_2’, z=‘col_3’, color=‘col_4’)\n\n\nfig = px.scatter_3d(df_MSFT_plot, x='Date', y='High_MSFT', z='Low_MSFT')\nfig.show()\n\n\n\n\n                                \n                                            \n\n\n\n\n\n5.4.1 3D Visualization lab\n\nPart a – Using the same stock you found in #2, create a 3D scatter plot for this new stock.\nPart b – Now use the following function to overlay the two 3D scatter plots\n\nfig = go.Figure()\nfig.add_trace(\n    go.Scatter3d(\n    x=df['column_1'],\n    y=df['column_2'],\n    z=['column_3'],\n    mode='markers',\n    name='Name of Chart'\n    )\n  )",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Notebook 1 : Intro to Data and Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "WS_2.html",
+    "href": "WS_2.html",
+    "title": "4  Notebook 2 : Statistical Analysis",
+    "section": "",
+    "text": "4.1 Data Sets",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Notebook 2 : Statistical Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "WS_2.html#data-sets",
+    "href": "WS_2.html#data-sets",
+    "title": "4  Notebook 2 : Statistical Analysis",
+    "section": "",
+    "text": "Male/Female Heights\n\nOur goal will be to claim what the average height is in this sample\nOur goal will also be to determine if the height of males on average is greater than the females\n\nFAMuSS\n\nWe will evaluate the data in the non-dominate arm (ndrm.ch) before and after training, given a particular genotype.",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Notebook 2 : Statistical Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "WS_2.html#learning-objectives",
+    "href": "WS_2.html#learning-objectives",
+    "title": "4  Notebook 2 : Statistical Analysis",
+    "section": "4.2 Learning objectives",
+    "text": "4.2 Learning objectives\n\nHypothesis Testing\n\np-test\nt-test\nt-test (comparing two means)\nANOVA",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Notebook 2 : Statistical Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "WS_2.html#libraries",
+    "href": "WS_2.html#libraries",
+    "title": "4  Notebook 2 : Statistical Analysis",
+    "section": "4.3 Libraries",
+    "text": "4.3 Libraries\n\n#Libraries\nimport pandas as pd\nimport plotly.express as px\nimport scipy.stats as stats #Gives us stat functions\nimport plotly.graph_objects as go",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Notebook 2 : Statistical Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "WS_2.html#dont-forget",
+    "href": "WS_2.html#dont-forget",
+    "title": "4  Notebook 2 : Statistical Analysis",
+    "section": "4.4 Don’t forget!",
+    "text": "4.4 Don’t forget!\n\n\n\nConclusions.png\n\n\n\n#Loading in data\ndf_FAMuSS = pd.read_csv('/content/famuss.csv')\ndf_FAMuSS\n\n\n    \n\n\n\n\n\n\nndrm.ch\ndrm.ch\nsex\nage\nrace\nheight\nweight\nactn3.r577x\nbmi\n\n\n\n\n0\n40.0\n40.0\nFemale\n27\nCaucasian\n65.0\n199.0\nCC\n33.112\n\n\n1\n25.0\n0.0\nMale\n36\nCaucasian\n71.7\n189.0\nCT\n25.845\n\n\n2\n40.0\n0.0\nFemale\n24\nCaucasian\n65.0\n134.0\nCT\n22.296\n\n\n3\n125.0\n0.0\nFemale\n40\nCaucasian\n68.0\n171.0\nCT\n25.998\n\n\n4\n40.0\n20.0\nFemale\n32\nCaucasian\n61.0\n118.0\nCC\n22.293\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n590\n62.5\n28.6\nMale\n24\nAsian\n71.5\n163.0\nCC\n22.415\n\n\n591\n87.5\n12.5\nFemale\n22\nCaucasian\n65.5\n136.0\nCT\n22.285\n\n\n592\n100.0\n12.5\nFemale\n21\nAsian\n59.0\n99.5\nCT\n20.094\n\n\n593\n43.8\n14.3\nFemale\n31\nCaucasian\n64.0\n134.0\nCT\n22.999\n\n\n594\n43.8\n14.3\nFemale\n30\nCaucasian\n64.0\n134.0\nCC\n22.999\n\n\n\n\n595 rows × 9 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\n#Load in Data\ndf_height = pd.read_csv('/content/speed_gender_height.csv')\ndf_height\n\n\n    \n\n\n\n\n\n\nspeed\ngender\nheight\n\n\n\n\n0\n85.0\nfemale\n69.0\n\n\n1\n40.0\nmale\n71.0\n\n\n2\n87.0\nfemale\n64.0\n\n\n3\n110.0\nfemale\n60.0\n\n\n4\n110.0\nmale\n70.0\n\n\n...\n...\n...\n...\n\n\n1320\n97.0\nfemale\n63.0\n\n\n1321\n100.0\nfemale\n66.0\n\n\n1322\n90.0\nfemale\n63.0\n\n\n1323\n90.0\nmale\n69.0\n\n\n1324\n60.0\nfemale\n62.0\n\n\n\n\n1325 rows × 3 columns",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Notebook 2 : Statistical Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "WS_2.html#t-test-click-me-for-documentation",
+    "href": "WS_2.html#t-test-click-me-for-documentation",
+    "title": "4  Notebook 2 : Statistical Analysis",
+    "section": "4.5 \\(t\\)-test (Click me for documentation!)",
+    "text": "4.5 \\(t\\)-test (Click me for documentation!)\nGiven the data on UCLA drivers, we want to consider what the average height might be. Let our claimed height to be \\(C=69\\) inches (a little over 5’7).\n\\(H_0 : \\mu_1 = C\\) (Claim)\n\\(H_1 : \\mu_1 \\neq C\\)\nSuppose \\(\\alpha = .05\\), what can we conclude if our hypothesis is \\(H_0\\).\n\n#Organize Data\ngroup_gender =df_height.groupby(\"gender\").groups\n\nmale = df_height[\"height\"].loc[group_gender[\"male\"]].dropna()\nfemale= df_height[\"height\"].loc[group_gender[\"female\"]].dropna()\nmale\n\n\n\n\n\n\n\n\nheight\n\n\n\n\n1\n71.0\n\n\n4\n70.0\n\n\n9\n69.0\n\n\n11\n72.0\n\n\n12\n70.0\n\n\n...\n...\n\n\n1304\n60.0\n\n\n1309\n69.0\n\n\n1312\n71.0\n\n\n1318\n68.0\n\n\n1323\n69.0\n\n\n\n\n442 rows × 1 columns\ndtype: float64\n\n\n\nstats.ttest_1samp(male, popmean=69)\n#First parameter is the data\n#Popmean is the expected value (claimed value)\n\nTtestResult(statistic=np.float64(3.952240834528328), pvalue=np.float64(9.01476379254167e-05), df=np.int64(441))\n\n\n\nfig_male_height = go.Figure()\nfig_male_height.add_trace(go.Histogram(x=male, nbinsx=20))\n\nConclusion :",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Notebook 2 : Statistical Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "WS_2.html#t-test-comparing-two-means",
+    "href": "WS_2.html#t-test-comparing-two-means",
+    "title": "4  Notebook 2 : Statistical Analysis",
+    "section": "4.6 \\(t\\)-test* (comparing two means)",
+    "text": "4.6 \\(t\\)-test* (comparing two means)\nGiven the data on UCLA drivers, we want to consider what the difference in average height might be. Let our claimed height to be \\(\\mu_1 \\neq \\mu_2\\).\n(Claim)\n\\(H_0 : \\mu_1 = \\mu_2\\)\n\\(H_1 : \\mu_1 \\neq \\mu_2\\) (Claim)\nSuppose \\(\\alpha = .05\\), what can we conclude if our hypothesis is \\(H_0\\)?\n\nstats.ttest_ind(male,female, equal_var=True)\n# First / Second Parameter -&gt; two samples you are testing\n# equal_var -&gt; is asking should we assume that the variance to be equal?\n\nTtestResult(statistic=np.float64(28.647342941683508), pvalue=np.float64(1.0205453181247639e-140), df=np.float64(1318.0))\n\n\nConclusion :",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Notebook 2 : Statistical Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "WS_2.html#anova",
+    "href": "WS_2.html#anova",
+    "title": "4  Notebook 2 : Statistical Analysis",
+    "section": "4.7 ANOVA",
+    "text": "4.7 ANOVA\nHere will use the data from FAMuSS. We create the categories based on genotype with their corresponding strength change in the non-dominate arm.\nRecall for the ANOVA test has the corresponding null and alternative hypothesis.\n\\(H_0 : \\mu_1 = \\mu_2 = \\cdots = \\mu_k\\)\n\\(H_1 : \\mu_1 \\neq \\mu_2 \\neq \\cdots \\neq \\mu_k\\) (at least one is different)\nSuppose \\(\\alpha = .05\\), what can we conclude if our claim is that our means are different?\n\nfig_ndrm = px.box(df_FAMuSS, x=\"actn3.r577x\", y=\"ndrm.ch\")\nfig_ndrm\n\n\n#ndrm non-dominate arm\n#drm domiante arm\n\n# Conider the nrdm\n# CC | CT | TT\n\ngroups =df_FAMuSS.groupby(\"actn3.r577x\").groups\n\nCC = df_FAMuSS[\"ndrm.ch\"].loc[groups[\"CC\"]]\nCT= df_FAMuSS[\"ndrm.ch\"].loc[groups[\"CT\"]]\nTT = df_FAMuSS[\"ndrm.ch\"].loc[groups[\"TT\"]]\n\nstats.f_oneway(CC,CT,TT)\n\n# After we want to\n# Post Hoc test, pair, 3 t-test... only one of them is .016\n\nF_onewayResult(statistic=np.float64(3.2307803478895685), pvalue=np.float64(0.04022462350595486))",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Notebook 2 : Statistical Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "WS_2.html#lab",
+    "href": "WS_2.html#lab",
+    "title": "4  Notebook 2 : Statistical Analysis",
+    "section": "4.8 Lab ::",
+    "text": "4.8 Lab ::\nIn post-hoc (after conducting the hypothesis test/ experiment), we now may want to consider what if we do a \\(t\\)-test pair wise. Use the \\(t\\)-test to determine which group(s) are different/greater from the rest? Or are they all different ?",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Notebook 2 : Statistical Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "WS_3.html",
+    "href": "WS_3.html",
+    "title": "5  Notebook 3 : Linear Algebra and traning momdels",
+    "section": "",
+    "text": "5.1 Learning objectives",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Notebook 3 : Linear Algebra and traning momdels</span>"
+    ]
+  },
+  {
+    "objectID": "WS_3.html#learning-objectives",
+    "href": "WS_3.html#learning-objectives",
+    "title": "5  Notebook 3 : Linear Algebra and traning momdels",
+    "section": "",
+    "text": "Linear Regression\n1-D Gradient Descents\nLoss functions\nLinear algebra review\nSupervised learning overview\nHow to train a model (training/test)",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Notebook 3 : Linear Algebra and traning momdels</span>"
+    ]
+  },
+  {
+    "objectID": "WS_3.html#libraries",
+    "href": "WS_3.html#libraries",
+    "title": "5  Notebook 3 : Linear Algebra and traning momdels",
+    "section": "5.2 Libraries",
+    "text": "5.2 Libraries\n\n#Libraries\nimport pandas as pd\nimport plotly.express as px\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import r2_score",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Notebook 3 : Linear Algebra and traning momdels</span>"
+    ]
+  },
+  {
+    "objectID": "WS_3.html#linear-regression-with-residuals",
+    "href": "WS_3.html#linear-regression-with-residuals",
+    "title": "5  Notebook 3 : Linear Algebra and traning momdels",
+    "section": "5.3 Linear Regression with residuals",
+    "text": "5.3 Linear Regression with residuals\n\n# New random dataset (fewer points)\nnp.random.seed(7)\nX = 2 * np.random.rand(15, 1)\ny = 4 + 3 * X + np.random.randn(15, 1)\n\n# Fit linear regression\nmodel = LinearRegression()\nmodel.fit(X, y)\n\n# Predictions for line\nX_line = np.linspace(0, 2, 100).reshape(-1, 1)\ny_line = model.predict(X_line)\n\n# Predictions for original points (for residuals)\ny_pred_points = model.predict(X)\n\n# Plot scatter\nplt.scatter(X, y)\n\n# Plot regression line\nplt.plot(X_line, y_line)\n\n# Draw residual lines (vertical distance)\nfor i in range(len(X)):\n    plt.plot([X[i], X[i]], [y[i], y_pred_points[i]])\n\n# Labels and title\nplt.xlabel(\"X\")\nplt.ylabel(\"y\")\nplt.title(\"Linear Regression with Residuals\")\n\nplt.show()\n\nprint(f'R^2 score : {r2_score(y,y_pred_points)}')\n\n\n\n\n\n\n\n\nR^2 score : 0.8341299898040686",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Notebook 3 : Linear Algebra and traning momdels</span>"
+    ]
+  },
+  {
+    "objectID": "WS_3.html#linear-regression-with-more-data-points",
+    "href": "WS_3.html#linear-regression-with-more-data-points",
+    "title": "5  Notebook 3 : Linear Algebra and traning momdels",
+    "section": "5.4 Linear Regression with more data points",
+    "text": "5.4 Linear Regression with more data points\nmodel = LinearRegression()\nmodel.fit(X, y)\n\n# Set random seed for reproducibility\nnp.random.seed(42)\n\n# Generate random data\nX = 2 * np.random.rand(100, 1)  # 100 points between 0 and 2\ny = 4 + 3 * X + np.random.randn(100, 1)  # linear relation with noise\n\n# Create and train the model\nmodel = LinearRegression()\nmodel.fit(X, y)\n\n# Predict values for the regression line\nX_new = np.linspace(0, 2, 100).reshape(-1, 1) #creates the line -- almost like a parameterization\ny_pred = model.predict(X_new)\n\n# Plot the scatter points\nplt.scatter(X, y)\n\n# Plot the regression line\nplt.plot(X_new, y_pred)\n\n# Labels and title\nplt.xlabel(\"X\")\nplt.ylabel(\"y\")\nplt.title(\"Random Scatter Plot with Linear Regression\")\n\n# Show plot\nplt.show()\n\n# Print model parameters\nprint(f\"Intercept: {model.intercept_[0]:.2f}\")\nprint(f\"Slope: {model.coef_[0][0]:.2f}\")\n\n\n\n\n\n\n\n\nIntercept: 4.22\nSlope: 2.77",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Notebook 3 : Linear Algebra and traning momdels</span>"
+    ]
+  },
+  {
+    "objectID": "WS_3.html#gradient-descent-visual",
+    "href": "WS_3.html#gradient-descent-visual",
+    "title": "5  Notebook 3 : Linear Algebra and traning momdels",
+    "section": "5.5 Gradient Descent Visual",
+    "text": "5.5 Gradient Descent Visual\n\n# -----------------------------\n# Generate data\n# -----------------------------\nnp.random.seed(0)\nx = np.linspace(0, 10, 30)\ntrue_b = 4.0\ntrue_m = 2.5\ny = true_b + true_m * x + np.random.randn(len(x)) * 2\n\n# -----------------------------\n# Fix intercept and optimize only slope\n# -----------------------------\nb_fixed = 4.0\n\ndef mse(m, b, x, y):\n    return np.mean((b + m * x - y) ** 2)\n\ndef grad_m(m, b, x, y):\n    n = len(x)\n    return (2 / n) * np.sum((b + m * x - y) * x)\n\n# -----------------------------\n# Gradient descent on m only\n# -----------------------------\nm = 0.0\nlearning_rate = 0.01\nnum_steps = 12\n\nm_history = [m]\nmse_history = [mse(m, b_fixed, x, y)]\n\nfor _ in range(num_steps):\n    m = m - learning_rate * grad_m(m, b_fixed, x, y)\n    m_history.append(m)\n    mse_history.append(mse(m, b_fixed, x, y))\n\n# -----------------------------\n# Smooth MSE curve\n# -----------------------------\nm_vals = np.linspace(-0.5, 5.0, 400)\nmse_vals = [mse(mv, b_fixed, x, y) for mv in m_vals]\n\n# -----------------------------\n# Plot\n# -----------------------------\nplt.figure(figsize=(10, 6))\nplt.plot(m_vals, mse_vals, label=\"MSE as a function of slope m\")\nplt.plot(m_history, mse_history, 'o-', label=\"Gradient descent steps\")\n\n# Number each step\nfor i, (m_i, j_i) in enumerate(zip(m_history, mse_history)):\n    plt.text(m_i, j_i, str(i), fontsize=9, ha='right', va='bottom')\n\n# Draw arrows between steps\nfor i in range(len(m_history) - 1):\n    plt.annotate(\n        \"\",\n        xy=(m_history[i + 1], mse_history[i + 1]),\n        xytext=(m_history[i], mse_history[i]),\n        arrowprops=dict(arrowstyle=\"-&gt;\", lw=1.2)\n    )\n\nplt.xlabel(\"Slope m\")\nplt.ylabel(\"Mean Squared Error\")\nplt.title(f\"MSE vs. Slope with Gradient Descent Steps (b fixed at {b_fixed})\")\nplt.legend()\nplt.grid(True)\nplt.show()\n\n# Print step-by-step values\nfor i in range(len(m_history)):\n    print(f\"Step {i:2d}: m = {m_history[i]:.4f}, MSE = {mse_history[i]:.4f}\")\n\n\n\n\n\n\n\n\nStep  0: m = 0.0000, MSE = 232.6515\nStep  1: m = 1.7564, MSE = 28.7517\nStep  2: m = 2.3217, MSE = 7.6316\nStep  3: m = 2.5037, MSE = 5.4440\nStep  4: m = 2.5622, MSE = 5.2174\nStep  5: m = 2.5811, MSE = 5.1939\nStep  6: m = 2.5871, MSE = 5.1915\nStep  7: m = 2.5891, MSE = 5.1913\nStep  8: m = 2.5897, MSE = 5.1912\nStep  9: m = 2.5899, MSE = 5.1912\nStep 10: m = 2.5900, MSE = 5.1912\nStep 11: m = 2.5900, MSE = 5.1912\nStep 12: m = 2.5900, MSE = 5.1912",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Notebook 3 : Linear Algebra and traning momdels</span>"
+    ]
+  },
+  {
+    "objectID": "WS_3.html#multiple-linear-regression",
+    "href": "WS_3.html#multiple-linear-regression",
+    "title": "5  Notebook 3 : Linear Algebra and traning momdels",
+    "section": "5.6 Multiple Linear Regression",
+    "text": "5.6 Multiple Linear Regression\nmodel = LinearRegression()\nmodel.fit(X, y)\n\nfrom mpl_toolkits.mplot3d import Axes3D\n\n# -----------------------------\n# Generate synthetic data\n# -----------------------------\nnp.random.seed(42)\nn_samples = 100\n\nX = np.random.rand(n_samples, 2)\nx1 = X[:, 0]\nx2 = X[:, 1]\n\n# True relationship\nb_true = 3\nw1_true = 4\nw2_true = -2\n\ny = b_true + w1_true * x1 + w2_true * x2 + np.random.randn(n_samples)\n\n# -----------------------------\n# Fit model\n# -----------------------------\nmodel = LinearRegression()\nmodel.fit(X, y)\n\nprint(\"Intercept:\", model.intercept_)\nprint(\"Coefficients:\", model.coef_)\n\n# -----------------------------\n# Create grid for plane\n# -----------------------------\nx1_grid, x2_grid = np.meshgrid(\n    np.linspace(x1.min(), x1.max(), 20),\n    np.linspace(x2.min(), x2.max(), 20)\n)\n\n# Predict on grid\nX_grid = np.c_[x1_grid.ravel(), x2_grid.ravel()]\ny_grid = model.predict(X_grid).reshape(x1_grid.shape)\n\n# -----------------------------\n# Plot\n# -----------------------------\nfig = plt.figure(figsize=(10, 7))\nax = fig.add_subplot(111, projection='3d')\n\n# Scatter data\nax.scatter(x1, x2, y)\n\n# Regression plane\nax.plot_surface(x1_grid, x2_grid, y_grid, alpha=0.5)\n\n# Labels\nax.set_xlabel(\"x1\")\nax.set_ylabel(\"x2\")\nax.set_zlabel(\"y\")\nax.set_title(\"Multiple Linear Regression (3D Plane)\")\n\nplt.show()\n\nIntercept: 2.772272264101702\nCoefficients: [ 4.33866677 -1.64505397]\n\n\n\n\n\n\n\n\n\n\nimport yfinance as yf\nimport datetime\n\n# 1. Define time frame for the stock data\nstart = datetime.datetime(2020, 1, 1)\nend = datetime.datetime(2026, 5, 1)\n\n# 2. Fetch data\n# This returns the exact same Pandas DataFrame format\ndf_MSFT = yf.download('MSFT', start=start, end=end)\n\n# Confidence Check : Look at the data\ndf_MSFT\n\n\ndf_MSFT_plot = df_MSFT.reset_index()\n# Flatten multi-level columns from yfinance output\ndf_MSFT_plot.columns = ['_'.join(col).strip() if isinstance(col, tuple) and col[1] else col[0] for col in df_MSFT_plot.columns.values]\n\n#Notice this is tuple\nprint(df_MSFT.columns)\n\n#Notice this is an arrary of names\nprint(df_MSFT_plot.columns)\n\n#Creating time series line plot\nfig_time_ser = px.line(df_MSFT_plot, x='Date', y='Close_MSFT')\n\n#Visualizing time series chart\nfig_time_ser\n\nX = df_MSFT_plot['Date']\ny = df_MSFT_plot['Close_MSFT']\n\nmodel = LinearRegression()\nX\n\n/tmp/ipykernel_4536/27424716.py:10: FutureWarning:\n\nYF.download() has changed argument auto_adjust default to True\n\n\n[*********************100%***********************]  1 of 1 completed\n\n\nMultiIndex([( 'Close', 'MSFT'),\n            (  'High', 'MSFT'),\n            (   'Low', 'MSFT'),\n            (  'Open', 'MSFT'),\n            ('Volume', 'MSFT')],\n           names=['Price', 'Ticker'])\nIndex(['Date', 'Close_MSFT', 'High_MSFT', 'Low_MSFT', 'Open_MSFT',\n       'Volume_MSFT'],\n      dtype='object')\n\n\n\n\n\n\n\n\n\n\n\n\nDate\n\n\n\n\n0\n2020-01-02\n\n\n1\n2020-01-03\n\n\n2\n2020-01-06\n\n\n3\n2020-01-07\n\n\n4\n2020-01-08\n\n\n...\n...\n\n\n1585\n2026-04-24\n\n\n1586\n2026-04-27\n\n\n1587\n2026-04-28\n\n\n1588\n2026-04-29\n\n\n1589\n2026-04-30\n\n\n\n\n1590 rows × 1 columns\ndtype: datetime64[ns]",
+    "crumbs": [
+      "Data Workshops",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Notebook 3 : Linear Algebra and traning momdels</span>"
+    ]
+  }
+]
